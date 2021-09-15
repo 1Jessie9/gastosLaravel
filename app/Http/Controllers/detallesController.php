@@ -93,7 +93,7 @@ class detallesController extends Controller
         $nombreImg=time().'.'.$imagen->getClientOriginalExtension();
         $destino=public_path('images/gastos');
         $request->cajaImgDetM->move($destino,$nombreImg);
-
+        
         $modificarDet=detalles::find($id);
         $modificarDet->nombre = $request->get('cajaNombreDetM');
         $modificarDet->descripcion = $request->get('cajaDescripcionDetM');
